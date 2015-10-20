@@ -1,12 +1,21 @@
 public class Problem5{
     public static void main(String[] args){
-        int sumSq = 0;
-        int sqSum = 0;
-        for (int i = 1; i <= 100; i++){
-            sumSq += i*i;
-            sqSum += i;
+        int top = 1;
+        for (int i = 11; i <= 20; i++){
+            top *= i;
         }
-        sqSum *= sqSum;
-        System.out.println(sqSum-sumSq);
+        System.out.println(top);
+        for (int i = 20; i <= top; i++){
+            boolean works = true;
+            for (int j = 11; j <= 20 && works; j++){
+                if (i % j != 0){
+                    works = false;
+                }
+            }
+            if (works){
+                System.out.println(i);
+                break;
+            }
+        }
     }
 }
