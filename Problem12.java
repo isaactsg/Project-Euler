@@ -6,7 +6,7 @@ public class Problem12{
             divisors = 2;
             int sum = last + i;
             last = sum;
-            if(sum % 2 != 0) continue;
+            if(sum % 2 != 0 || sum % 3 != 0 || sum % 5 != 0 || sum % 7 != 0 || sum % 11 != 0 || sum % 13 != 0 || sum % 17 != 0) continue;
             for(int j = 3; j <= sum; j++){
                 if(sum % j == 0) divisors++;
             }
