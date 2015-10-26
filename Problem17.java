@@ -2,23 +2,23 @@ public class Problem17{
     public static void main(String[] args){
         int sum = 0;
         for(int i = 1; i <= 1000; i++){
+            int s = 0;
             if (i == 1000){
-                sum += "onethousand".length();
+                s += "onethousand".length();
             } else if (i >= 100){
-                sum += count(i/100);
-                sum += "hundred".length();
+                s += count(i/100);
+                s += "hundred".length();
                 if (i % 100 != 0){
-                    sum += "and".length();
-                    sum += tens(i % 100);
+                    s += "and".length();
+                    s += tens(i % 100);
                 }
                 //sum += count(i % 10);
             } else {
-                sum += tens(i);
+                s += tens(i);
                 //sum += count(i % 10);
             }
-            if(i < 1001){
-                System.out.println( i + " " + sum + " " + i/100 + " " + i%100);
-            }
+            sum += s;
+            System.out.println( i + " " + s + " " + sum + " " + i/100 + " " + i%100);
         }
         System.out.println(sum);
     }
@@ -101,7 +101,7 @@ public class Problem17{
                 sum += "eighty".length();
                 break;
             case 9:
-                sum += "ninty".length();
+                sum += "ninety".length();
                 break;
             case 0:
                 sum += 0;
