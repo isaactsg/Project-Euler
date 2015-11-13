@@ -18,4 +18,14 @@ public class Problem21{
         }
         System.out.println(sum);
     }
+
+    public static int sumDiv(int num){
+        int sumD = 0;
+        for(int i = 1; i < num; i++){
+            if (num % i == 0){
+                sumD += i;
+            }
+        }
+        return sumD;
+    }
 }
