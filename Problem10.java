@@ -1,5 +1,6 @@
 public class Problem10{
     public static void main(String[] args){
+        //seive
         int l = 2000000;
         int[] list = new int[l];
         for(int i = 0; i < l; i++){
